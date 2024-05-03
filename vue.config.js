@@ -4,7 +4,7 @@ module.exports = defineConfig({
   configureWebpack: {
     output: {
       libraryTarget: "system",
-      filename: '[name].js', 
+      filename: 'js/[name].js', 
     },
   },
 });

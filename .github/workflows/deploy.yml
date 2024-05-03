@@ -33,4 +33,4 @@ jobs:
 
       - name: Notify API
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"component": "@mfe/vueapp", "path": "${{secrets.URL_S3}}/vueapp/${{ github.sha }}/app.js"}' ${{ secrets.URL_LAMBDA }}
+          curl -X POST -H "Content-Type: application/json" -d '{"component": "@mfe/vueapp", "path": "${{secrets.URL_S3}}/vueapp/${{ github.sha }}/js/app.js"}' ${{ secrets.URL_LAMBDA }}
