@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="Ranqueio FUBÁ"/>
+  <HelloWorld msg="SUBIMO POOOOOOOOORR*"/>
   <img alt="Vue logo" src="./assets/logo.png">
 </template>
 
