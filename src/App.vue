@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="SUBIMO POOOOOOOOORR*"/>
+  <HelloWorld msg="VUUUUUUUUUUUUUUE"/>
   <img alt="Vue logo" src="./assets/logo.png">
 </template>
 
