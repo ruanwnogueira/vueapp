@@ -1,15 +1,23 @@
 <template>
-  <HelloWorld msg="VUUUUUUUUUUUUUUE"/>
   <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Eventos"/>
+  <UserComponent />
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import UserComponent from './components/UserComponent.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    UserComponent
+  },
+  data(){
+    return {
+    }
   }
 }
 </script>

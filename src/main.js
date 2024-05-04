@@ -1,10 +1,18 @@
-import { h, createApp } from "vue";
-import singleSpaVue from "single-spa-vue";
+import { h, createApp } from 'vue'
+import singleSpaVue from 'single-spa-vue'
+import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-import App from "./App.vue";
+const pinia = createPinia()
+pinia.use(piniaPluginPersistedstate)
+
+import App from './App.vue'
 
 const vueLifecycles = singleSpaVue({
   createApp,
+  handleInstance(app) {
+    app.use(pinia)
+  },
   appOptions: {
     render() {
       return h(App, {
@@ -15,11 +23,11 @@ const vueLifecycles = singleSpaVue({
         name: this.name,
         mountParcel: this.mountParcel,
         singleSpa: this.singleSpa,
-      });
+      })
     },
   },
-});
+})
 
-export const bootstrap = vueLifecycles.bootstrap;
-export const mount = vueLifecycles.mount;
-export const unmount = vueLifecycles.unmount;
+export const bootstrap = vueLifecycles.bootstrap
+export const mount = vueLifecycles.mount
+export const unmount = vueLifecycles.unmount
